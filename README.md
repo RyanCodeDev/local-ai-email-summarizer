@@ -1,4 +1,6 @@
-# Signal — Local AI Email Workspace
+# Local AI Email Summarizer
+
+_This is a submission for the [Hacktoberfest Open-Source AI Challenge Week 3: Slow and Steady](https://dev.to/challenges/hacktoberfest-week3-2026-10-19)_
 
 A documented React + TypeScript + Vite app that turns a pasted email into a 2–3 sentence summary, action items, and two possible replies. All AI requests go directly from the browser to the OpenAI-compatible server you configure.
 

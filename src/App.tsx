@@ -16,6 +16,7 @@ import {
   Mail,
   MessageSquare,
   Plus,
+  Settings,
   Settings2,
   ShieldCheck,
   Sparkles,
@@ -181,41 +182,13 @@ function App() {
   }
   return (
     <div className="app-shell">
-      <aside className="rail" aria-label="App navigation">
-        <a href="#main" className="brand-icon" aria-label="Signal home">
-          <Zap size={25} fill="currentColor" />
-        </a>
-        <div className="rail-divider" />
-        <button
-          className="rail-button active"
-          aria-label="Email workspace"
-          onClick={() => input.current?.focus()}
-        >
-          <Mail size={21} />
-        </button>
-        <button
-          className="rail-button"
-          aria-label="New email, clear workspace"
-          onClick={clear}
-        >
-          <Plus size={23} />
-        </button>
-        <div className="rail-bottom">
-          <button
-            className="rail-button"
-            aria-label="Settings"
-            onClick={() => setSettingsOpen(true)}
-          >
-            <Settings2 size={21} />
-          </button>
-          <span className="avatar">YOU</span>
-        </div>
-      </aside>
       <div className="main-shell">
         <header className="topbar">
           <a className="wordmark" href="#main">
-            signal<span className="wordmark-dot">.</span>
-            <span className="product-tag">LOCAL AI</span>
+            <h1>
+              Local AI
+              <br className="mobile-break" /> <span>Email Summarizer</span>
+            </h1>
           </a>
           <div className="topbar-right">
             <span className="privacy-label">
@@ -235,13 +208,7 @@ function App() {
         <main id="main">
           <section className="intro">
             <div>
-              <div className="eyebrow">
-                <span className="tiny-line" /> LESS INBOX. MORE CLARITY.
-              </div>
-              <h1>
-                Long email.
-                <br className="mobile-break" /> <span>Clear next steps.</span>
-              </h1>
+
               <p>
                 Your private AI workspace for turning emails into summaries,
                 actions, and thoughtful replies.
@@ -366,9 +333,15 @@ function App() {
                   <span className="panel-icon accent">
                     <WandSparkles size={18} />
                   </span>
-                  <h2 id="result-heading">The clarity you need</h2>
+                  <h2 id="result-heading">AI Summary</h2>
                   <span className="step-number">02</span>
                 </div>
+                <button
+                  className="text-button"
+                  onClick={() => setSettingsOpen(true)}
+                >
+                  Manage connection <Settings size={14} />
+                </button>
                 <div className="output-switch" aria-label="Output view">
                   <button
                     aria-label="Rendered output"
@@ -398,10 +371,9 @@ function App() {
                     <div className="ai-orbit processing">
                       <LoaderCircle size={30} className="spin" />
                     </div>
-                    <h3>Finding the signal…</h3>
+                    <h3>Local AI is on it!</h3>
                     <p>
-                      Your server is reading the email.
-                      <br />A little clarity is on its way.
+                      Your server is working on the email.
                     </p>
                     <span className="processing-note">
                       Processing on your configured server
@@ -495,7 +467,7 @@ function App() {
               className="text-button"
               onClick={() => setSettingsOpen(true)}
             >
-              Manage connection <ArrowRight size={14} />
+              Configure Your AI Server <Settings size={14} />
             </button>
           </section>
           <section className="how-it-works">

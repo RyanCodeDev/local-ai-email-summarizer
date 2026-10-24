@@ -68,10 +68,9 @@
   color: #b1bbc7;
 }
 .main-shell {
-  margin-left: 76px;
 }
 .topbar {
-  height: 88px;
+  /* height: 88px; */
   border-bottom: 1px solid #23262c;
   display: flex;
   justify-content: space-between;
@@ -117,7 +116,7 @@
 }
 .topbar-separator {
   width: 1px;
-  height: 20px;
+  /* height: 20px; */
   background: #272d33;
 }
 .server-pill {
@@ -729,7 +728,7 @@ h1 span {
 /* Native modal dialog provides focus containment and Escape handling. */
 .settings-modal {
   position: fixed;
-  max-width: 560px;
+  max-width: 720px;
   width: calc(100% - 32px);
   max-height: calc(100dvh - 40px);
   padding: 28px;
@@ -946,11 +945,11 @@ h1 span {
     padding-top: 21px;
   }
   .main-shell {
-    margin-left: 60px;
   }
   .topbar {
-    height: 77px;
+    /* height: 77px; */
     padding: 0 22px;
+    flex-direction: column;
   }
   .topbar-right {
     gap: 12px;
@@ -1049,7 +1048,6 @@ h1 span {
     height: 38px;
   }
   .main-shell {
-    margin-left: 50px;
   }
   .topbar {
     padding: 0 16px;
